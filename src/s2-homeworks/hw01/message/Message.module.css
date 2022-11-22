@@ -8,7 +8,7 @@
 
 .imageAndText {
     display: flex;
-    align-items: end;
+    align-items: flex-end;
     flex-flow: row-reverse;
     gap: 15px;
     width: 1000px;
