@@ -7,7 +7,7 @@
     display: flex;
     gap: 12px;
     align-items: flex-start;
-    margin-bottom: 10px;
+    margin-bottom: 204px;
 }
 
 .inputContainer {
@@ -79,4 +79,5 @@
     font-size: 14px;
     line-height: 17px;
     color: #000000;
+
 }
