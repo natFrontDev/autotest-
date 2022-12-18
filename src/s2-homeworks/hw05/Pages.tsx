@@ -15,11 +15,11 @@ export const PATH = {
     const navigate = useNavigate()
     const location = useLocation()
 
-     // useEffect(() => {
-     //     if (location.pathname === '/') {
-     //         navigate(PATH.PRE_JUNIOR)
-     //     }
-     // }, [location.pathname])
+     useEffect(() => {
+         if (location.pathname === '/') {
+             navigate(PATH.PRE_JUNIOR)
+         }
+     }, [location.pathname])
      console.log(location.pathname)
     return (
         <div>
