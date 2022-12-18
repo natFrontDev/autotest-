@@ -1,5 +1,5 @@
-import React from 'react'
-import { Routes, Route, Navigate } from 'react-router-dom'
+import React, {useEffect} from 'react'
+import {Routes, Route, Navigate, useNavigate, useLocation} from 'react-router-dom'
 import Error404 from './pages/Error404'
 import PreJunior from './pages/PreJunior'
 import Junior from './pages/Junior'
@@ -11,22 +11,31 @@ export const PATH = {
     JUNIOR_PLUS: '/junior-plus',
 }
 
-function Pages() {
+ function Pages() {
+    const navigate = useNavigate()
+    const location = useLocation()
+
+     // useEffect(() => {
+     //     if (location.pathname === '/') {
+     //         navigate(PATH.PRE_JUNIOR)
+     //     }
+     // }, [location.pathname])
+     console.log(location.pathname)
     return (
         <div>
             {/*Routes выбирает первый подходящий роут*/}
             <Routes>
                 {/*роутинг будут писать студенты*/}
                 {/*в начале мы попадаем на страницу '/' и переходим сразу на страницу /pre-junior*/}
-                {/*<Route ...*/}
+                <Route path = {'/'} element={<PreJunior/>}/>
 
                 {/*роуты для /pre-junior, /junior, /junior-plus*/}
-                {/*<Route ...*/}
-                {/*<Route ...*/}
-                {/*<Route ...*/}
+                <Route path = {PATH.PRE_JUNIOR} element={<PreJunior/>}/>
+                <Route path = {PATH.JUNIOR} element={<Junior/>}/>
+                <Route path = {PATH.JUNIOR_PLUS} element={<JuniorPlus/>}/>
 
                 {/*роут для несуществующей страницы должен отрисовать <Error404 />*/}
-                {/*<Route ...*/}
+                <Route path = {'/*'} element={<Error404/>}/>
             </Routes>
         </div>
     )
