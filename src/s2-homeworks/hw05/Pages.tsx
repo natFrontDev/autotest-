@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react'
-import {Routes, Route, Navigate, useNavigate, useLocation} from 'react-router-dom'
+import {Routes, Route, useNavigate, useLocation} from 'react-router-dom'
 import Error404 from './pages/Error404'
 import PreJunior from './pages/PreJunior'
 import Junior from './pages/Junior'
@@ -8,7 +8,7 @@ import JuniorPlus from './pages/JuniorPlus'
 export const PATH = {
     PRE_JUNIOR: '/pre-junior',
     JUNIOR: '/junior',
-    JUNIOR_PLUS: '/junior-plus',
+    JUNIOR_PLUS: '/juniorplus',
 }
 
  function Pages() {
