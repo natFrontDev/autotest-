@@ -14,7 +14,7 @@ export const Layout: FC<PropsType> = ({ children }) => {
     useEffect(() => {
         open && (document.body.style.overflow = 'hidden')
         !open && (document.body.style.overflow = 'unset')
-    }, [open]) // отключает прокрутку при открытом меню
+    }, [open]) // отключает прокрутmку при открытом меню
 
     return (
         <>
@@ -22,6 +22,7 @@ export const Layout: FC<PropsType> = ({ children }) => {
             <Header handleOpen={handleOpen} />
             <div>
                 {/*страницы*/}
+
                 {children}
             </div>
         </>
